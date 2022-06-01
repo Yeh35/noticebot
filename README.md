@@ -5,6 +5,7 @@
 
 ### GCP
 ```shell
+./gradlew build
 docker build -t asia.gcr.io/<project-name>/noticeboot-spring .
 docker push asia.gcr.io/<project-name>/noticeboot-spring
 ```
