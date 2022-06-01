@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  test_mysql:
+    container_name: mysql8-noticebot
+    image: mysql:8.0.18
+    environment:
+      MYSQL_DATABASE: noticebot
+      MYSQL_ROOT_PASSWORD: 0701
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "3306:3306"
