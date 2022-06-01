@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/noticebot
+    username: root
+    password: 0701
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 8
+  jpa:
+    hibernate:
+      ddl-auto: update  # 주의 DB 스키마 변경됨 / 차후에는 DB 스키마 관리 툴을 이용해서 DB도 버전관리를 할 예정 (flywaydb)
+    generate-ddl: true  # 주의 DB 스키마 변경되는 걸 허용함
+    show-sql: true      # 주의 SQL이 콘솔에 출력됨
+    properties:
+      hibernate:
+        format_sql: true
