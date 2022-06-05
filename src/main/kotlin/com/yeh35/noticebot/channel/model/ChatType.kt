@@ -1,8 +1,6 @@
 package com.yeh35.noticebot.channel.model
 
 import com.fasterxml.jackson.annotation.JsonCreator
-import com.fasterxml.jackson.annotation.JsonProperty
-import kotlin.String
 
 enum class ChatType {
     GROUP,

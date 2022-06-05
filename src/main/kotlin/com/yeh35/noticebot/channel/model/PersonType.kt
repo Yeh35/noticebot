@@ -1,7 +1,6 @@
 package com.yeh35.noticebot.channel.model
 
 import com.fasterxml.jackson.annotation.JsonCreator
-import com.fasterxml.jackson.annotation.JsonProperty
 
 enum class PersonType {
     MANAGER,
@@ -12,7 +11,7 @@ enum class PersonType {
 
         @JvmStatic
         @JsonCreator
-        fun fromJson(@JsonProperty personType: String): PersonType {
+        fun fromJson(personType: String): PersonType {
             return when (personType) {
                 "manager" -> MANAGER
                 "bot" -> BOT

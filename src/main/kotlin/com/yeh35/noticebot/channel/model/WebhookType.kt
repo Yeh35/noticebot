@@ -1,7 +1,6 @@
 package com.yeh35.noticebot.channel.model
 
 import com.fasterxml.jackson.annotation.JsonCreator
-import com.fasterxml.jackson.annotation.JsonProperty
 
 enum class WebhookType {
     MESSAGE,
@@ -11,7 +10,7 @@ enum class WebhookType {
 
         @JvmStatic
         @JsonCreator
-        fun fromJson(@JsonProperty type: String): WebhookType {
+        fun fromJson(type: String): WebhookType {
             return when (type) {
                 "message" -> MESSAGE
                 "UserChat" -> USER_CHAT
