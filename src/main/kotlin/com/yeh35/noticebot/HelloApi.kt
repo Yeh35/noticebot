@@ -1,7 +1,9 @@
 package com.yeh35.noticebot
 
+import com.yeh35.noticebot.channel.dto.WebhookMessageDto
 import org.jboss.logging.Logger
 import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -13,8 +15,8 @@ class HelloApi(
 
     private val logger = Logger.getLogger(this::class.java)
 
-    @RequestMapping("/hello")
-    fun hello(@RequestBody body: String): String {
+    @PostMapping("/hello")
+    fun hello(@RequestBody body: WebhookMessageDto.RequestDto): String {
         logger.info("hello")
         logger.info("Body: $body")
         return "hello"
