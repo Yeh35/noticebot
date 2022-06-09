@@ -1,4 +1,4 @@
-package com.yeh35.noticebot.domain.accout
+package com.yeh35.noticebot.domain.accout.domain
 
 import javax.persistence.*
 
